@@ -11,9 +11,8 @@ export const chunk = (list, size) => {
     throw new RangeError('size must be a positive integer');
   }
 
-  const chunks = [];
-  for (let start = 0; start < list.length; start += size) {
-    chunks.push(list.slice(start, start + size));
-  }
-  return chunks;
+  const chunkCount = Math.ceil(list.length / size);
+  return Array.from({ length: chunkCount }, (_, index) =>
+    list.slice(index * size, index * size + size),
+  );
 };

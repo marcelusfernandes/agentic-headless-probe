@@ -1,0 +1,11 @@
+{
+  "name": "agentic-headless-probe",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Disposable: one headless orchestrator run (agentic-setup issue 345)",
+  "scripts": {
+    "test": "node --test tests/"
+  },
+  "engines": { "node": ">=22" }
+}
